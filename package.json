@@ -3,6 +3,7 @@
     "private": true,
     "workspaces": ["apps/*"],
     "scripts": {
-        "dev:SoundPad": "npm --workspaces apps/SoundPad run dev"
+        "dev:SoundPad": "npm --workspaces apps/SoundPad run dev",
+        "dev:ReduxLearning": "npm --workspaces apps/ReduxLearning run dev"
     }
 }
