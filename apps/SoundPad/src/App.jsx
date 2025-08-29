@@ -7,8 +7,14 @@ const App = () => {
   const [pads, setPads] = React.useState(padsData)
 
   const padsElement = pads.map(pad => (
-    <Pad key={pad.id} btnColor={pad.color} light={pad.on}  />
+    <Pad key={pad.id} id={pad.id} btnColor={pad.color} light={pad.on} toggle={toggleLight} />
   ))
+
+  function toggleLight(id)  {
+    setPads(prevPad => prevPad.map(target => {
+      return target.id === id ? {...target, on: !target.on} : target
+    }))
+  }
 
   console.log(padsElement)
   return (
