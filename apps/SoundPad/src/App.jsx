@@ -10,7 +10,7 @@ const App = () => {
     <Pad key={pad.id} id={pad.id} btnColor={pad.color} light={pad.on} toggle={toggleLight} />
   ))
 
-  function toggleLight(id)  {
+  function toggleLight(id)  {_
     setPads(prevPad => prevPad.map(target => {
       return target.id === id ? {...target, on: !target.on} : target
     }))
